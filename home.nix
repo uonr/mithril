@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, specialPkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -26,6 +26,7 @@
     you-get
     du-dust
     mosh
+    specialPkgs.rnix-lsp
   ];
 
   programs.direnv = {
@@ -42,10 +43,8 @@
     dotDir = ".config/zsh";
     history.path = ".config/zsh/.zsh_history";
     envExtra = builtins.readFile ./zshenv;
-    shellAliases = {
-    };
-    dirHashes = {
-    };
+    shellAliases = { };
+    dirHashes = { };
     plugins = with pkgs; [
       { name = "you-should-use"; src = "${zsh-you-should-use}/share/zsh/plugins/you-should-use"; }
     ];
@@ -56,7 +55,7 @@
     userName = "Tachibana Kiyomi";
     userEmail = "me@yuru.me";
     difftastic.enable = true;
-    ignores = [".DS_Store"];
+    ignores = [ ".DS_Store" ];
     signing.key = "FFF6DDE2181C1F55E8885470C02D23F17563AA95";
     signing.signByDefault = false;
 

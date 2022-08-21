@@ -8,13 +8,18 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rnix-lsp = {
+      url = "github:nix-community/rnix-lsp";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, rnix-lsp, ... }:
     let
       system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    in
+    {
       homeConfigurations.mikan = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
@@ -26,7 +31,11 @@
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
-        extraSpecialArgs = {};
+        extraSpecialArgs = {
+          specialPkgs = {
+            rnix-lsp = rnix-lsp.packages.${system}.rnix-lsp;
+          };
+        };
       };
     };
 }
