@@ -26,6 +26,7 @@
     you-get
     du-dust
     mosh
+    python3
     specialPkgs.rnix-lsp
   ];
 
@@ -43,10 +44,15 @@
     dotDir = ".config/zsh";
     history.path = "$HOME/.config/zsh/.zsh_history";
     envExtra = builtins.readFile ./zshenv;
-    shellAliases = { };
+    shellAliases = {
+      doco = "docker-compose";
+    };
     dirHashes = { };
     plugins = with pkgs; [
-      { name = "you-should-use"; src = "${zsh-you-should-use}/share/zsh/plugins/you-should-use"; }
+      {
+        name = "you-should-use";
+        src = "${zsh-you-should-use}/share/zsh/plugins/you-should-use";
+      }
     ];
   };
 
