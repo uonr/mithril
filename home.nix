@@ -5,8 +5,6 @@
   # paths it should manage.
   home.username = "mikan";
   home.homeDirectory = "/Users/mikan";
-  home.sessionVariables.EDITOR = "nvim";
-
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
@@ -18,7 +16,6 @@
   home.stateVersion = "22.05";
 
   home.packages = with pkgs; [
-    comma
     ripgrep
     fd
     btop
@@ -27,6 +24,8 @@
     rustup
     yt-dlp
     you-get
+    du-dust
+    mosh
   ];
 
   programs.direnv = {
