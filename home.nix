@@ -1,6 +1,9 @@
 { config, pkgs, specialPkgs, ... }:
 
 {
+  # Configuration Options
+  # https://nix-community.github.io/home-manager/options.html
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "mikan";
@@ -52,6 +55,11 @@
       {
         name = "you-should-use";
         src = "${zsh-you-should-use}/share/zsh/plugins/you-should-use";
+      }
+      {
+        name = "zsh-autopair";
+        file = "autopair.zsh";
+        src = "${zsh-autopair}/share/zsh/zsh-autopair";
       }
     ];
   };
@@ -121,6 +129,10 @@
     enable = true;
     defaultCommand = "fd --type f";
     tmux.enableShellIntegration = true;
+  };
+
+  programs.starship = {
+    enable = true;
   };
 
   # Let Home Manager install and manage itself.
