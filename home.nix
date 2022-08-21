@@ -36,7 +36,7 @@
 
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
+    enableAutosuggestions = false;
     enableCompletion = true;
     enableSyntaxHighlighting = true;
     autocd = true;
