@@ -44,12 +44,15 @@
     enableCompletion = true;
     enableSyntaxHighlighting = true;
     autocd = true;
+    # https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html
+    defaultKeymap = "emacs";
     dotDir = ".config/zsh";
     history.path = "$HOME/.config/zsh/.zsh_history";
     envExtra = builtins.readFile ./zshenv;
     shellAliases = {
       doco = "docker-compose";
     };
+    initExtra = builtins.readFile ./init.zsh;
     dirHashes = { };
     plugins = with pkgs; [
       {
