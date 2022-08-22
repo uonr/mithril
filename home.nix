@@ -30,6 +30,7 @@
     du-dust
     mosh
     python3
+    tealdeer
     specialPkgs.rnix-lsp
   ];
 
