@@ -76,6 +76,11 @@
     ignores = [ ".DS_Store" ];
     signing.key = "FFF6DDE2181C1F55E8885470C02D23F17563AA95";
     signing.signByDefault = false;
+    extraConfig = {
+      init = {
+        defaultBranch = "master";
+      };
+    };
 
     aliases = {
       a = "add .";
