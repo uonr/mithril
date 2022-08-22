@@ -1,0 +1,10 @@
+- hosts: mithril
+  roles:
+    - wired
+
+  tasks:
+    - name: Disable macOS press and hold feature
+      osx_defaults:
+        key: ApplePressAndHoldEnabled
+        type: boolean
+        value: false

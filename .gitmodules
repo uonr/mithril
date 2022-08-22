@@ -1,0 +1,3 @@
+[submodule "ansible/roles/wired"]
+	path = ansible/roles/wired
+	url = git@github.com:uonr/wired-network-role.git
