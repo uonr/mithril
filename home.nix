@@ -108,6 +108,7 @@
     vimAlias = true;
     vimdiffAlias = true;
     withPython3 = true;
+    plugins = import ./common/nvim-plugins.nix { inherit pkgs; };
   };
 
   programs.bat.enable = true;
