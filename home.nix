@@ -125,12 +125,6 @@
     '';
     plugins = with pkgs.tmuxPlugins; [
       gruvbox
-      {
-        plugin = jump;
-        extraConfig = ''
-          set -g @jump-key 's'
-        '';
-      }
     ];
   };
 
