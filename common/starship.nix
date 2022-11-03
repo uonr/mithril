@@ -27,6 +27,13 @@
       terraform = {
         disabled = true;
       };
+      battery = {
+        full_symbol = "满 ";
+        charging_symbol = "输 ";
+        discharging_symbol = "断 ";
+        unknown_symbol = "电 ";
+        empty_symbol = "乏 ";
+      };
       package.disabled = true;
     };
   };
