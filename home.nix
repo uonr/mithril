@@ -1,4 +1,4 @@
-{ config, pkgs, specialPkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   # Configuration Options
@@ -21,6 +21,8 @@
   # changes in each release.
   home.stateVersion = "22.05";
 
+  home.file.".ssh/config".source = ./ssh_config;
+
   home.packages = with pkgs; [
     ripgrep
     fd
@@ -34,7 +36,7 @@
     mosh
     python3
     tealdeer
-    specialPkgs.rnix-lsp
+    nil
   ];
 
   programs.direnv = {
@@ -83,6 +85,8 @@
       init = {
         defaultBranch = "master";
       };
+      push.default = "current";
+      remote.pushDefault = "origin";
     };
 
     aliases = {

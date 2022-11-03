@@ -1,0 +1,14 @@
+Host koma
+  Hostname 10.110.100.2
+
+Host mithril
+  Hostname 10.110.100.1
+
+Host rei
+  Hostname 10.110.100.10
+
+Host doll
+  Hostname 10.110.100.12
+
+Host roze
+  Hostname 10.110.1.1
