@@ -46,11 +46,11 @@
     },
     "sweet-home": {
       "locked": {
-        "lastModified": 1668015426,
-        "narHash": "sha256-oy8OyKFr74rM61sdJwDv5sIDPnLUrkiXyQ5oP9LPrgw=",
+        "lastModified": 1668078325,
+        "narHash": "sha256-/hlVqN0yLnGXo3DSXwbP/a3yOIRn8exKupHw86bC5mE=",
         "owner": "uonr",
         "repo": "sweet-home",
-        "rev": "65240f13060291498676c826344f8471ac450300",
+        "rev": "77d112f8be85ecbcad6d909876f1e99edd249c8f",
         "type": "github"
       },
       "original": {
